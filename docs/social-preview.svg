@@ -1,81 +1,164 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640" width="1280" height="640" role="img" aria-label="hermes-jev-north-star. A star becomes a prompt, the run leaves evidence, and a gate of checks plus a Jev judge decides. Exit 0 means met, exit 1 names the weakest requirement.">
-  <title>hermes-jev-north-star</title>
-  <desc>Social preview card, sized for thumbnail legibility: few words, large type, the pipeline and the two exit codes.</desc>
-  <style>
-    .bg { fill: #0d1117; }
-    .band { fill: #111826; }
-    .title { font: 700 66px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #f0f6fc; }
-    .sub { font: 400 30px -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif; fill: #8b949e; }
-    .lbl { font: 600 30px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #f0f6fc; }
-    .cap { font: 400 22px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #8b949e; }
-    .exit { font: 600 30px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
-    .exittxt { font: 400 26px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #c9d1d9; }
-    .box { fill: #161b22; stroke: #30363d; stroke-width: 3; }
-    .flow { stroke: #30363d; stroke-width: 3; fill: none; }
-    .flowhi { stroke: #d29922; stroke-width: 3; fill: none; }
-    .amber { fill: #d29922; }
-    .green { fill: #3fb950; }
-    .blue { fill: #58a6ff; }
-  </style>
-
-  <rect class="bg" x="0" y="0" width="1280" height="640"/>
-  <rect class="band" x="0" y="0" width="1280" height="210"/>
-
-  <!-- the fixed point the run is aimed at -->
-  <g transform="translate(1148,104)">
-    <circle r="44" class="flow"/>
-    <circle r="28" fill="#0d1117" stroke="#58a6ff" stroke-width="3"/>
-    <path d="M0,-19 L5.5,-5.5 L19,0 L5.5,5.5 L0,19 L-5.5,5.5 L-19,0 L-5.5,-5.5 Z" class="blue"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640" width="1280" height="640" role="img" aria-label="north-star. Write the finish line down, then let it judge the run. A constellation of star, prompt, run and evidence leads to the north star, the gate.">
+  <title>north-star</title>
+  <defs>
+    <radialGradient id="bg" cx="78%" cy="18%" r="95%">
+      <stop offset="0" stop-color="#16213d"/><stop offset=".45" stop-color="#0b1224"/><stop offset="1" stop-color="#05080f"/>
+    </radialGradient>
+    <radialGradient id="aurora" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#ffd479" stop-opacity=".22"/><stop offset="1" stop-color="#ffd479" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#ffe7a8" stop-opacity=".55"/><stop offset="1" stop-color="#ffe7a8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="nodehalo" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#9ec5ff" stop-opacity=".45"/><stop offset="1" stop-color="#9ec5ff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="core" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fffaf0"/><stop offset="1" stop-color="#ffd479"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1280" height="640" fill="url(#bg)"/>
+  <ellipse cx="1110" cy="190" rx="420" ry="300" fill="url(#aurora)"/>
+  <g>
+    <circle class="tw" cx="1176" cy="299" r="1.3" fill="#dfe8ff" opacity="0.83" style="animation-delay:5.1s;animation-duration:3.5s"/>
+    <circle class="tw" cx="1133" cy="404" r="1.3" fill="#dfe8ff" opacity="0.74" style="animation-delay:5.9s;animation-duration:6.4s"/>
+    <circle class="tw" cx="786" cy="106" r="0.6" fill="#dfe8ff" opacity="0.37" style="animation-delay:5.0s;animation-duration:3.0s"/>
+    <circle class="tw" cx="1120" cy="382" r="1.1" fill="#dfe8ff" opacity="0.47" style="animation-delay:2.0s;animation-duration:5.0s"/>
+    <circle class="tw" cx="14" cy="61" r="1.7" fill="#dfe8ff" opacity="0.95" style="animation-delay:1.7s;animation-duration:6.5s"/>
+    <circle class="tw" cx="1070" cy="450" r="0.9" fill="#dfe8ff" opacity="0.37" style="animation-delay:4.5s;animation-duration:4.7s"/>
+    <circle class="tw" cx="720" cy="75" r="0.6" fill="#dfe8ff" opacity="0.92" style="animation-delay:5.1s;animation-duration:4.2s"/>
+    <circle class="tw" cx="1079" cy="8" r="0.8" fill="#dfe8ff" opacity="0.58" style="animation-delay:5.6s;animation-duration:3.0s"/>
+    <circle class="tw" cx="904" cy="270" r="1.3" fill="#dfe8ff" opacity="0.51" style="animation-delay:3.8s;animation-duration:5.7s"/>
+    <circle class="tw" cx="1227" cy="481" r="0.6" fill="#dfe8ff" opacity="0.36" style="animation-delay:0.8s;animation-duration:5.4s"/>
+    <circle class="tw" cx="870" cy="126" r="1.3" fill="#dfe8ff" opacity="0.43" style="animation-delay:1.1s;animation-duration:5.5s"/>
+    <circle class="tw" cx="822" cy="81" r="1.1" fill="#dfe8ff" opacity="0.87" style="animation-delay:5.9s;animation-duration:2.8s"/>
+    <circle class="tw" cx="1240" cy="378" r="0.6" fill="#dfe8ff" opacity="0.86" style="animation-delay:1.3s;animation-duration:4.3s"/>
+    <circle class="tw" cx="819" cy="71" r="0.8" fill="#dfe8ff" opacity="0.81" style="animation-delay:1.3s;animation-duration:3.8s"/>
+    <circle class="tw" cx="101" cy="64" r="1.3" fill="#dfe8ff" opacity="0.57" style="animation-delay:3.8s;animation-duration:2.9s"/>
+    <circle class="tw" cx="794" cy="87" r="1.3" fill="#dfe8ff" opacity="0.87" style="animation-delay:2.9s;animation-duration:4.9s"/>
+    <circle class="tw" cx="1156" cy="518" r="0.8" fill="#dfe8ff" opacity="0.73" style="animation-delay:4.4s;animation-duration:3.4s"/>
+    <circle class="tw" cx="708" cy="437" r="1.1" fill="#dfe8ff" opacity="0.60" style="animation-delay:5.3s;animation-duration:5.0s"/>
+    <circle class="tw" cx="139" cy="32" r="0.9" fill="#dfe8ff" opacity="0.50" style="animation-delay:1.4s;animation-duration:5.4s"/>
+    <circle class="tw" cx="1049" cy="380" r="0.9" fill="#dfe8ff" opacity="0.94" style="animation-delay:3.1s;animation-duration:6.2s"/>
+    <circle class="tw" cx="834" cy="392" r="0.6" fill="#dfe8ff" opacity="0.47" style="animation-delay:1.7s;animation-duration:6.2s"/>
+    <circle class="tw" cx="29" cy="176" r="1.1" fill="#dfe8ff" opacity="0.52" style="animation-delay:1.5s;animation-duration:3.0s"/>
+    <circle class="tw" cx="679" cy="615" r="0.6" fill="#dfe8ff" opacity="0.94" style="animation-delay:2.2s;animation-duration:6.1s"/>
+    <circle class="tw" cx="838" cy="439" r="1.3" fill="#dfe8ff" opacity="0.90" style="animation-delay:5.7s;animation-duration:5.0s"/>
+    <circle class="tw" cx="402" cy="29" r="1.3" fill="#dfe8ff" opacity="0.79" style="animation-delay:3.8s;animation-duration:4.6s"/>
+    <circle class="tw" cx="411" cy="632" r="0.6" fill="#dfe8ff" opacity="0.38" style="animation-delay:2.7s;animation-duration:4.2s"/>
+    <circle class="tw" cx="1191" cy="468" r="0.8" fill="#dfe8ff" opacity="0.56" style="animation-delay:4.8s;animation-duration:6.2s"/>
+    <circle class="tw" cx="874" cy="570" r="1.1" fill="#dfe8ff" opacity="0.65" style="animation-delay:5.7s;animation-duration:2.9s"/>
+    <circle class="tw" cx="26" cy="421" r="1.1" fill="#dfe8ff" opacity="0.40" style="animation-delay:3.5s;animation-duration:5.1s"/>
+    <circle class="tw" cx="816" cy="628" r="1.1" fill="#dfe8ff" opacity="0.79" style="animation-delay:4.4s;animation-duration:4.2s"/>
+    <circle class="tw" cx="742" cy="283" r="1.3" fill="#dfe8ff" opacity="0.37" style="animation-delay:0.5s;animation-duration:5.6s"/>
+    <circle class="tw" cx="768" cy="308" r="0.8" fill="#dfe8ff" opacity="0.82" style="animation-delay:5.7s;animation-duration:3.2s"/>
+    <circle class="tw" cx="842" cy="311" r="0.6" fill="#dfe8ff" opacity="0.72" style="animation-delay:2.2s;animation-duration:3.3s"/>
+    <circle class="tw" cx="663" cy="478" r="0.9" fill="#dfe8ff" opacity="0.89" style="animation-delay:4.0s;animation-duration:4.4s"/>
+    <circle class="tw" cx="1027" cy="578" r="0.8" fill="#dfe8ff" opacity="0.54" style="animation-delay:2.3s;animation-duration:5.0s"/>
+    <circle class="tw" cx="1066" cy="538" r="1.7" fill="#dfe8ff" opacity="0.84" style="animation-delay:0.4s;animation-duration:6.4s"/>
+    <circle class="tw" cx="1178" cy="526" r="1.1" fill="#dfe8ff" opacity="0.54" style="animation-delay:3.8s;animation-duration:4.6s"/>
+    <circle class="tw" cx="1069" cy="621" r="1.1" fill="#dfe8ff" opacity="0.52" style="animation-delay:1.9s;animation-duration:5.9s"/>
+    <circle class="tw" cx="776" cy="431" r="0.9" fill="#dfe8ff" opacity="0.82" style="animation-delay:3.4s;animation-duration:3.9s"/>
+    <circle class="tw" cx="32" cy="93" r="1.1" fill="#dfe8ff" opacity="0.51" style="animation-delay:1.1s;animation-duration:5.6s"/>
+    <circle class="tw" cx="993" cy="505" r="1.7" fill="#dfe8ff" opacity="0.67" style="animation-delay:0.7s;animation-duration:3.2s"/>
+    <circle class="tw" cx="817" cy="238" r="0.6" fill="#dfe8ff" opacity="0.64" style="animation-delay:4.1s;animation-duration:3.5s"/>
+    <circle class="tw" cx="234" cy="15" r="1.1" fill="#dfe8ff" opacity="0.49" style="animation-delay:3.2s;animation-duration:2.9s"/>
+    <circle class="tw" cx="992" cy="345" r="1.3" fill="#dfe8ff" opacity="0.45" style="animation-delay:3.0s;animation-duration:6.5s"/>
+    <circle class="tw" cx="1081" cy="445" r="0.8" fill="#dfe8ff" opacity="0.78" style="animation-delay:0.5s;animation-duration:6.3s"/>
+    <circle class="tw" cx="799" cy="576" r="1.1" fill="#dfe8ff" opacity="0.65" style="animation-delay:3.3s;animation-duration:5.2s"/>
+    <circle class="tw" cx="1044" cy="222" r="0.9" fill="#dfe8ff" opacity="0.78" style="animation-delay:3.9s;animation-duration:3.6s"/>
+    <circle class="tw" cx="1042" cy="408" r="1.7" fill="#dfe8ff" opacity="0.58" style="animation-delay:0.7s;animation-duration:3.7s"/>
+    <circle class="tw" cx="1243" cy="590" r="0.9" fill="#dfe8ff" opacity="0.56" style="animation-delay:5.5s;animation-duration:6.0s"/>
+    <circle class="tw" cx="704" cy="487" r="1.1" fill="#dfe8ff" opacity="0.87" style="animation-delay:5.5s;animation-duration:3.6s"/>
+    <circle class="tw" cx="550" cy="30" r="1.3" fill="#dfe8ff" opacity="0.43" style="animation-delay:2.0s;animation-duration:5.7s"/>
+    <circle class="tw" cx="923" cy="532" r="1.7" fill="#dfe8ff" opacity="0.70" style="animation-delay:2.6s;animation-duration:6.1s"/>
+    <circle class="tw" cx="879" cy="481" r="1.1" fill="#dfe8ff" opacity="0.79" style="animation-delay:3.2s;animation-duration:3.9s"/>
+    <circle class="tw" cx="816" cy="334" r="1.3" fill="#dfe8ff" opacity="0.92" style="animation-delay:1.5s;animation-duration:5.3s"/>
+    <circle class="tw" cx="1108" cy="388" r="0.9" fill="#dfe8ff" opacity="0.66" style="animation-delay:5.1s;animation-duration:6.4s"/>
+    <circle class="tw" cx="732" cy="133" r="1.3" fill="#dfe8ff" opacity="0.58" style="animation-delay:0.7s;animation-duration:2.8s"/>
+    <circle class="tw" cx="688" cy="35" r="1.1" fill="#dfe8ff" opacity="0.42" style="animation-delay:3.3s;animation-duration:6.5s"/>
+    <circle class="tw" cx="1185" cy="294" r="1.1" fill="#dfe8ff" opacity="0.43" style="animation-delay:1.6s;animation-duration:4.6s"/>
+    <circle class="tw" cx="556" cy="517" r="1.1" fill="#dfe8ff" opacity="0.60" style="animation-delay:3.1s;animation-duration:3.2s"/>
+    <circle class="tw" cx="45" cy="170" r="1.7" fill="#dfe8ff" opacity="0.47" style="animation-delay:4.7s;animation-duration:2.9s"/>
+    <circle class="tw" cx="791" cy="73" r="1.7" fill="#dfe8ff" opacity="0.72" style="animation-delay:3.5s;animation-duration:6.0s"/>
+    <circle class="tw" cx="915" cy="446" r="1.1" fill="#dfe8ff" opacity="0.85" style="animation-delay:0.1s;animation-duration:5.1s"/>
+    <circle class="tw" cx="786" cy="344" r="1.7" fill="#dfe8ff" opacity="0.48" style="animation-delay:3.2s;animation-duration:3.6s"/>
+    <circle class="tw" cx="694" cy="374" r="0.8" fill="#dfe8ff" opacity="0.84" style="animation-delay:1.4s;animation-duration:5.5s"/>
+    <circle class="tw" cx="1149" cy="205" r="0.9" fill="#dfe8ff" opacity="0.82" style="animation-delay:5.3s;animation-duration:3.5s"/>
+    <circle class="tw" cx="254" cy="68" r="0.8" fill="#dfe8ff" opacity="0.58" style="animation-delay:0.8s;animation-duration:3.1s"/>
+    <circle class="tw" cx="558" cy="595" r="1.3" fill="#dfe8ff" opacity="0.59" style="animation-delay:4.7s;animation-duration:3.3s"/>
+    <circle class="tw" cx="874" cy="19" r="0.8" fill="#dfe8ff" opacity="0.84" style="animation-delay:3.4s;animation-duration:4.1s"/>
+    <circle class="tw" cx="810" cy="222" r="1.7" fill="#dfe8ff" opacity="0.64" style="animation-delay:5.0s;animation-duration:5.8s"/>
+    <circle class="tw" cx="39" cy="483" r="1.3" fill="#dfe8ff" opacity="0.44" style="animation-delay:3.1s;animation-duration:4.9s"/>
+    <circle class="tw" cx="1070" cy="626" r="1.7" fill="#dfe8ff" opacity="0.92" style="animation-delay:0.6s;animation-duration:3.0s"/>
+    <circle class="tw" cx="592" cy="485" r="0.9" fill="#dfe8ff" opacity="0.56" style="animation-delay:2.3s;animation-duration:4.4s"/>
+    <circle class="tw" cx="809" cy="34" r="0.8" fill="#dfe8ff" opacity="0.79" style="animation-delay:1.1s;animation-duration:4.5s"/>
+    <circle class="tw" cx="27" cy="565" r="1.7" fill="#dfe8ff" opacity="0.91" style="animation-delay:5.3s;animation-duration:6.2s"/>
+    <circle class="tw" cx="728" cy="127" r="1.3" fill="#dfe8ff" opacity="0.50" style="animation-delay:5.9s;animation-duration:5.8s"/>
+    <circle class="tw" cx="1160" cy="473" r="0.8" fill="#dfe8ff" opacity="0.89" style="animation-delay:4.9s;animation-duration:4.3s"/>
+    <circle class="tw" cx="1120" cy="442" r="1.1" fill="#dfe8ff" opacity="0.78" style="animation-delay:4.6s;animation-duration:4.3s"/>
+    <circle class="tw" cx="601" cy="15" r="0.9" fill="#dfe8ff" opacity="0.38" style="animation-delay:5.9s;animation-duration:6.1s"/>
+    <circle class="tw" cx="353" cy="608" r="0.9" fill="#dfe8ff" opacity="0.69" style="animation-delay:2.0s;animation-duration:5.2s"/>
+    <circle class="tw" cx="682" cy="251" r="1.1" fill="#dfe8ff" opacity="0.81" style="animation-delay:3.9s;animation-duration:5.4s"/>
+    <circle class="tw" cx="1247" cy="22" r="1.3" fill="#dfe8ff" opacity="0.62" style="animation-delay:0.6s;animation-duration:3.7s"/>
+    <circle class="tw" cx="646" cy="483" r="1.7" fill="#dfe8ff" opacity="0.50" style="animation-delay:2.3s;animation-duration:3.2s"/>
+    <circle class="tw" cx="1153" cy="351" r="1.3" fill="#dfe8ff" opacity="0.86" style="animation-delay:2.5s;animation-duration:4.7s"/>
+    <circle class="tw" cx="823" cy="351" r="1.7" fill="#dfe8ff" opacity="0.91" style="animation-delay:4.6s;animation-duration:3.0s"/>
+    <circle class="tw" cx="781" cy="45" r="1.1" fill="#dfe8ff" opacity="0.71" style="animation-delay:2.5s;animation-duration:4.7s"/>
+    <circle class="tw" cx="836" cy="358" r="0.9" fill="#dfe8ff" opacity="0.37" style="animation-delay:4.0s;animation-duration:5.6s"/>
+    <circle class="tw" cx="984" cy="374" r="1.7" fill="#dfe8ff" opacity="0.58" style="animation-delay:0.9s;animation-duration:5.6s"/>
+    <circle class="tw" cx="1142" cy="475" r="0.6" fill="#dfe8ff" opacity="0.54" style="animation-delay:3.5s;animation-duration:5.5s"/>
+    <circle class="tw" cx="1016" cy="148" r="1.7" fill="#dfe8ff" opacity="0.50" style="animation-delay:2.9s;animation-duration:6.4s"/>
+    <circle class="tw" cx="670" cy="593" r="1.7" fill="#dfe8ff" opacity="0.93" style="animation-delay:5.5s;animation-duration:3.3s"/>
+    <circle class="tw" cx="157" cy="545" r="0.9" fill="#dfe8ff" opacity="0.62" style="animation-delay:3.2s;animation-duration:3.3s"/>
+    <circle class="tw" cx="852" cy="292" r="0.9" fill="#dfe8ff" opacity="0.57" style="animation-delay:3.8s;animation-duration:5.3s"/>
+    <circle class="tw" cx="948" cy="517" r="0.8" fill="#dfe8ff" opacity="0.49" style="animation-delay:5.7s;animation-duration:5.5s"/>
+    <circle class="tw" cx="152" cy="565" r="1.3" fill="#dfe8ff" opacity="0.51" style="animation-delay:3.7s;animation-duration:4.1s"/>
+    <circle class="tw" cx="874" cy="360" r="1.3" fill="#dfe8ff" opacity="0.49" style="animation-delay:1.1s;animation-duration:3.8s"/>
+    <circle class="tw" cx="1211" cy="321" r="1.7" fill="#dfe8ff" opacity="0.37" style="animation-delay:5.5s;animation-duration:6.1s"/>
+    <circle class="tw" cx="100" cy="62" r="1.7" fill="#dfe8ff" opacity="0.94" style="animation-delay:1.0s;animation-duration:3.7s"/>
+    <circle class="tw" cx="177" cy="551" r="0.6" fill="#dfe8ff" opacity="0.85" style="animation-delay:2.7s;animation-duration:5.8s"/>
+    <circle class="tw" cx="980" cy="285" r="1.7" fill="#dfe8ff" opacity="0.57" style="animation-delay:1.5s;animation-duration:5.8s"/>
+    <circle class="tw" cx="834" cy="625" r="0.9" fill="#dfe8ff" opacity="0.85" style="animation-delay:1.7s;animation-duration:5.6s"/>
+    <circle class="tw" cx="742" cy="296" r="0.9" fill="#dfe8ff" opacity="0.69" style="animation-delay:0.5s;animation-duration:3.1s"/>
+    <circle class="tw" cx="621" cy="436" r="0.9" fill="#dfe8ff" opacity="0.54" style="animation-delay:4.9s;animation-duration:2.8s"/>
+    <circle class="tw" cx="1159" cy="385" r="1.7" fill="#dfe8ff" opacity="0.77" style="animation-delay:1.8s;animation-duration:5.5s"/>
+    <circle class="tw" cx="471" cy="81" r="1.7" fill="#dfe8ff" opacity="0.89" style="animation-delay:2.6s;animation-duration:5.0s"/>
+    <circle class="tw" cx="876" cy="182" r="1.3" fill="#dfe8ff" opacity="0.54" style="animation-delay:4.8s;animation-duration:3.9s"/>
+    <circle class="tw" cx="513" cy="591" r="1.3" fill="#dfe8ff" opacity="0.57" style="animation-delay:1.5s;animation-duration:4.1s"/>
+    <circle class="tw" cx="721" cy="505" r="1.3" fill="#dfe8ff" opacity="0.46" style="animation-delay:0.9s;animation-duration:5.0s"/>
+    <circle class="tw" cx="1088" cy="515" r="0.8" fill="#dfe8ff" opacity="0.69" style="animation-delay:3.1s;animation-duration:4.8s"/>
+    <circle class="tw" cx="1230" cy="414" r="1.1" fill="#dfe8ff" opacity="0.82" style="animation-delay:0.4s;animation-duration:4.8s"/>
+    <circle class="tw" cx="114" cy="59" r="1.7" fill="#dfe8ff" opacity="0.37" style="animation-delay:0.6s;animation-duration:4.0s"/>
   </g>
-
-  <text class="title" x="80" y="112">hermes-jev-north-star</text>
-  <text class="sub" x="80" y="164">write the finish line down, then let it judge the run</text>
-
-  <!-- pipeline: five stages, two of them inside the gate -->
-  <g transform="translate(80,258)">
-    <rect class="box" x="0" y="0" width="176" height="104" rx="14"/>
-    <text class="lbl" x="26" y="50">star</text>
-    <text class="cap" x="26" y="82">validated</text>
-
-    <path class="flow" d="M176,52 L214,52"/>
-    <path class="flow" d="M204,42 L214,52 L204,62"/>
-
-    <rect class="box" x="220" y="0" width="188" height="104" rx="14"/>
-    <text class="lbl" x="246" y="50">prompt</text>
-    <text class="cap" x="246" y="82">from the star</text>
-
-    <path class="flow" d="M408,52 L446,52"/>
-    <path class="flow" d="M436,42 L446,52 L436,62"/>
-
-    <rect class="box" x="452" y="0" width="176" height="104" rx="14"/>
-    <text class="lbl" x="478" y="50">run</text>
-    <text class="cap" x="478" y="82">the work</text>
-
-    <path class="flow" d="M628,52 L666,52"/>
-    <path class="flow" d="M656,42 L666,52 L656,62"/>
-
-    <rect class="box" x="672" y="0" width="196" height="104" rx="14"/>
-    <text class="lbl" x="698" y="50">evidence</text>
-    <text class="cap" x="698" y="82">appended</text>
-
-    <path class="flowhi" d="M868,52 L906,52"/>
-    <path class="flowhi" d="M896,42 L906,52 L896,62"/>
-
-    <rect x="912" y="-20" width="288" height="144" rx="16" fill="#161b22" stroke="#d29922" stroke-width="3"/>
-    <text class="amber" x="938" y="14" style="font: 600 22px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;">gate</text>
-    <rect x="936" y="28" width="240" height="40" rx="10" fill="#0d1117" stroke="#30363d" stroke-width="3"/>
-    <text class="lbl" x="958" y="58" style="font-size:24px;">checks</text>
-    <rect x="936" y="76" width="240" height="40" rx="10" fill="#0d1117" stroke="#30363d" stroke-width="3"/>
-    <text class="lbl" x="958" y="106" style="font-size:24px;">judge</text>
-  </g>
-
-  <!-- what the exit codes mean, in the same words the tool prints -->
-  <g transform="translate(80,472)">
-    <text class="exit green" x="0" y="0">exit 0</text>
-    <text class="exittxt" x="140" y="0">every requirement is met</text>
-    <text class="exit amber" x="0" y="52">exit 1</text>
-    <text class="exittxt" x="140" y="52">keep going, and stdout names the weakest requirement</text>
-  </g>
-
-  <text class="cap" x="80" y="586">no evidence, no verdict   ·   a judge that cannot answer never passes</text>
+  <text x="84" y="210" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="104" font-weight="800" letter-spacing="-3" fill="#f5f8ff">north<tspan fill="#ffd479">-</tspan>star</text>
+  <text x="90" y="272" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="30" fill="#aab6cf">write the finish line down,</text>
+  <text x="90" y="312" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="30" fill="#aab6cf">then let it judge the run</text>
+  <text x="90" y="398" font-family="ui-monospace, SFMono-Regular, 'Cascadia Mono', Consolas, monospace" font-size="21" fill="#7ee2a8">exit 0<tspan fill="#dbe3f2">  every requirement is met</tspan></text>
+  <text x="90" y="434" font-family="ui-monospace, SFMono-Regular, 'Cascadia Mono', Consolas, monospace" font-size="21" fill="#ffc36b">exit 1<tspan fill="#dbe3f2">  keep going, names the weakest</tspan></text>
+  <text x="90" y="612" font-family="ui-monospace, SFMono-Regular, 'Cascadia Mono', Consolas, monospace" font-size="16" fill="#6f7b95">a skill for Hermes Agent and any agent with a shell · judged by Jev</text>
+  <path d="M640,520 L790,440 L930,480 L1040,360 L1110,190" fill="none" stroke="#ffd479" stroke-opacity=".18" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="path" d="M640,520 L790,440 L930,480 L1040,360 L1110,190" fill="none" stroke="#ffd479" stroke-opacity=".75" stroke-width="2" stroke-dasharray="6 10" stroke-linecap="round"/>
+  <circle cx="640" cy="520" r="22" fill="url(#nodehalo)"/>
+  <path d="M640,511 Q642.52,517.48 649,520 Q642.52,522.52 640,529 Q637.48,522.52 631,520 Q637.48,517.48 640,511 Z" fill="#eaf2ff" filter="url(#glow)"/>
+  <text x="640" y="558" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="19" font-weight="700" fill="#eef3ff">star</text>
+  <text x="640" y="579" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'Cascadia Mono', Consolas, monospace" font-size="14" fill="#8b97b1">saved + checked</text>
+  <circle cx="790" cy="440" r="22" fill="url(#nodehalo)"/>
+  <path d="M790,431 Q792.52,437.48 799,440 Q792.52,442.52 790,449 Q787.48,442.52 781,440 Q787.48,437.48 790,431 Z" fill="#eaf2ff" filter="url(#glow)"/>
+  <text x="790" y="478" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="19" font-weight="700" fill="#eef3ff">prompt</text>
+  <text x="790" y="499" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'Cascadia Mono', Consolas, monospace" font-size="14" fill="#8b97b1">made from it</text>
+  <circle cx="930" cy="480" r="22" fill="url(#nodehalo)"/>
+  <path d="M930,471 Q932.52,477.48 939,480 Q932.52,482.52 930,489 Q927.48,482.52 921,480 Q927.48,477.48 930,471 Z" fill="#eaf2ff" filter="url(#glow)"/>
+  <text x="930" y="518" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="19" font-weight="700" fill="#eef3ff">run</text>
+  <text x="930" y="539" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'Cascadia Mono', Consolas, monospace" font-size="14" fill="#8b97b1">does the work</text>
+  <circle cx="1040" cy="360" r="22" fill="url(#nodehalo)"/>
+  <path d="M1040,351 Q1042.52,357.48 1049,360 Q1042.52,362.52 1040,369 Q1037.48,362.52 1031,360 Q1037.48,357.48 1040,351 Z" fill="#eaf2ff" filter="url(#glow)"/>
+  <text x="1040" y="398" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="19" font-weight="700" fill="#eef3ff">evidence</text>
+  <text x="1040" y="419" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'Cascadia Mono', Consolas, monospace" font-size="14" fill="#8b97b1">what it found</text>
+  <circle class="pulse" cx="1110" cy="190" r="119" fill="url(#halo)"/>
+  <path d="M1110.0,112.5 L1113.1,182.5 L1123.3,176.7 L1117.5,186.9 L1160.0,190.0 L1117.5,193.1 L1123.3,203.3 L1113.1,197.5 L1110.0,240.0 L1106.9,197.5 L1096.7,203.3 L1102.5,193.1 L1060.0,190.0 L1102.5,186.9 L1096.7,176.7 L1106.9,182.5 Z" fill="url(#core)" filter="url(#glow)"/>
+  <circle cx="1110" cy="190" r="5.6" fill="#fffdf5"/>
 </svg>

@@ -1,5 +1,5 @@
 ---
-name: hermes-jev-north-star
+name: north-star
 description: Use when a project needs a north star, a finish line, or a definition of done. Interviews the owner one question at a time, saves a star the run can be judged against, generates the goal prompt to hand the run, and gives Jev the fuzzy requirements to judge.
 version: 1.1.0
 metadata:
@@ -39,15 +39,15 @@ intention into states someone can point at.
   tool is there:
 
 ```bash
-git clone https://github.com/poponline63/hermes-jev-north-star ~/hermes-jev-north-star
-python3 ~/hermes-jev-north-star/scripts/north_star.py --help
+git clone https://github.com/poponline63/north-star ~/north-star
+python3 ~/north-star/scripts/north_star.py --help
 ```
 
 Everywhere below, `<tool>` means whichever path is real for your install. The tests are
 `scripts/smoke_test.py` (77 checks, no key, no network), the judge is `scripts/jev_judge.py`, the
 starting template is `templates/star.example.json`, and the reference is
 `references/star-format.md`. Source and issues:
-<https://github.com/poponline63/hermes-jev-north-star>.
+<https://github.com/poponline63/north-star>.
 
 ## Commands
 

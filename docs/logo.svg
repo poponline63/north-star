@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-label="north-star logo">
+  <title>north-star</title>
+  <defs>
+    <radialGradient id="bg" cx="78%" cy="18%" r="95%">
+      <stop offset="0" stop-color="#16213d"/><stop offset=".45" stop-color="#0b1224"/><stop offset="1" stop-color="#05080f"/>
+    </radialGradient>
+    <radialGradient id="aurora" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#ffd479" stop-opacity=".22"/><stop offset="1" stop-color="#ffd479" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#ffe7a8" stop-opacity=".55"/><stop offset="1" stop-color="#ffe7a8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="nodehalo" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#9ec5ff" stop-opacity=".45"/><stop offset="1" stop-color="#9ec5ff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="core" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fffaf0"/><stop offset="1" stop-color="#ffd479"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#bg)"/>
+  <circle cx="64" cy="68" r="52" fill="url(#halo)"/>
+  <path d="M64.0,18.0 L66.1,62.9 L73.2,58.8 L69.1,65.9 L98.0,68.0 L69.1,70.1 L73.2,77.2 L66.1,73.1 L64.0,102.0 L61.9,73.1 L54.8,77.2 L58.9,70.1 L30.0,68.0 L58.9,65.9 L54.8,58.8 L61.9,62.9 Z" fill="url(#core)" filter="url(#glow)"/>
+  <circle cx="64" cy="68" r="4" fill="#fffdf5"/>
+</svg>

@@ -1,6 +1,15 @@
-# hermes-jev-north-star
+<p align="center"><img src="docs/logo.svg" width="96" alt="north-star logo: a glowing eight-point star"></p>
 
-<img src="docs/hero.svg" alt="A run moves from a saved star to a generated prompt, to evidence, then to a gate made of deterministic checks and a Jev judge. Exit 0 means every requirement is met." width="100%">
+<h1 align="center">north-star</h1>
+
+<p align="center">
+  <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-ffd479?labelColor=0b1224"></a>
+  <img alt="Python: stdlib only" src="https://img.shields.io/badge/python-stdlib%20only-9ec5ff?labelColor=0b1224">
+  <a href="https://github.com/poponline63/north-star/actions"><img alt="Tests" src="https://img.shields.io/github/actions/workflow/status/poponline63/north-star/validate.yml?label=smoke%20test&labelColor=0b1224"></a>
+  <img alt="Judged by Jev" src="https://img.shields.io/badge/judged%20by-Jev-7ee2a8?labelColor=0b1224">
+</p>
+
+<img src="docs/hero.svg" alt="A constellation runs from star, to prompt, to run, to evidence, and ends at the north star, which is the gate: deterministic checks, then a Jev judge. Exit 0 means every requirement is met; exit 1 keeps going and names the weakest requirement." width="100%">
 
 A [Hermes Agent](https://github.com/NousResearch/hermes-agent) skill that turns an intention into
 a finish line an agent can be held to, generates the prompt that starts the run, and then lets
@@ -27,7 +36,7 @@ Not an official Nous Research or TypeSafe project.
 ## Install
 
 ```bash
-hermes skills install https://raw.githubusercontent.com/poponline63/hermes-jev-north-star/main/SKILL.md
+hermes skills install https://raw.githubusercontent.com/poponline63/north-star/main/SKILL.md
 ```
 
 A SKILL.md URL is what Hermes installs from. `hermes skills inspect <same url>` previews it first.
@@ -35,14 +44,14 @@ That install copies the skill document, `references/`, and `templates/`; it does
 `scripts/`, so clone the repo once to have the tool on disk:
 
 ```bash
-git clone https://github.com/poponline63/hermes-jev-north-star ~/hermes-jev-north-star
-python3 ~/hermes-jev-north-star/scripts/north_star.py --help
+git clone https://github.com/poponline63/north-star ~/north-star
+python3 ~/north-star/scripts/north_star.py --help
 ```
 
 Then in a chat session:
 
 ```
-/hermes-jev-north-star the public downloads page for my CLI tool is finished
+/north-star the public downloads page for my CLI tool is finished
 ```
 
 Any agent that can run a shell command can use it without Hermes at all: the skill is one markdown
@@ -232,7 +241,8 @@ next step rather than on a model's opinion about its own progress:
 
 ```
 SKILL.md                      the skill itself
-docs/hero.svg                 the banner above, drawn as SVG
+docs/logo.svg                 the logo
+docs/hero.svg                 the animated banner above, drawn as SVG
 docs/gate.svg                 the gate diagram
 docs/social-preview.svg       the source for the link-preview card
 docs/social-preview.png       that card exported at 1280x640 (the only binary here)

@@ -1,0 +1,15 @@
+name: Idea or feature request
+description: A finish line north-star can't express yet, or a gate it should support
+labels: [enhancement]
+body:
+  - type: textarea
+    id: goal
+    attributes:
+      label: What were you trying to hold a run to?
+      description: The goal in your own words, and where the current star format or gate fell short.
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would help?

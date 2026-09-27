@@ -1,91 +1,133 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="1200" height="320" role="img" aria-label="hermes-jev-north-star: star, prompt, run, evidence, then a gate made of deterministic checks and a Jev judge.">
-  <title>hermes-jev-north-star</title>
-  <desc>A run moves left to right: a saved star becomes a generated prompt, the run produces evidence, and a gate decides. The gate runs deterministic shell checks first, then reads the evidence file, then asks Jev. It exits 0 only when every requirement is met.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="1200" height="400" role="img" aria-label="north-star: a constellation from star, to prompt, to run, to evidence, ending at the north star, which is the gate. Exit 0 means every requirement is met; exit 1 keeps going and names the weakest requirement.">
+  <title>north-star</title>
+  <defs>
+    <radialGradient id="bg" cx="78%" cy="18%" r="95%">
+      <stop offset="0" stop-color="#16213d"/><stop offset=".45" stop-color="#0b1224"/><stop offset="1" stop-color="#05080f"/>
+    </radialGradient>
+    <radialGradient id="aurora" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#ffd479" stop-opacity=".22"/><stop offset="1" stop-color="#ffd479" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#ffe7a8" stop-opacity=".55"/><stop offset="1" stop-color="#ffe7a8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="nodehalo" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#9ec5ff" stop-opacity=".45"/><stop offset="1" stop-color="#9ec5ff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="core" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fffaf0"/><stop offset="1" stop-color="#ffd479"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
   <style>
-    .bg { fill: #0d1117; }
-    .edge { fill: none; stroke: #30363d; stroke-width: 2; }
-    .title { font: 700 34px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #f0f6fc; }
-    .sub { font: 400 17px -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif; fill: #8b949e; }
-    .lbl { font: 600 15px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #f0f6fc; }
-    .small { font: 400 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #8b949e; }
-    .tiny { font: 400 12px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #6e7681; }
-    .box { fill: #161b22; stroke: #30363d; stroke-width: 2; }
-    .star { stroke: #58a6ff; stroke-width: 2; fill: none; }
-    .flow { stroke: #30363d; stroke-width: 2; fill: none; }
-    .flowhi { stroke: #d29922; stroke-width: 2; fill: none; }
-    .jd { fill: #8b949e; }
-    .accent { fill: #d29922; }
-    .blue { fill: #58a6ff; }
-    .green { fill: #3fb950; }
+    .tw { animation: twinkle 4s ease-in-out infinite; }
+    .path { animation: march 2.4s linear infinite; }
+    .pulse { animation: pulse 3.2s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+    @keyframes twinkle { 50% { opacity: .12; } }
+    @keyframes march { to { stroke-dashoffset: -32; } }
+    @keyframes pulse { 50% { opacity: .5; transform: scale(.86); } }
+    @media (prefers-reduced-motion: reduce) { .tw, .path, .pulse { animation: none; } }
   </style>
-
-  <rect class="bg" x="0" y="0" width="1200" height="320" rx="14"/>
-  <rect x="1" y="1" width="1198" height="318" rx="13" class="edge"/>
-
-  <!-- title block -->
-  <text class="title" x="40" y="66">hermes-jev-north-star</text>
-  <text class="sub" x="40" y="96">turn an intention into a finish line an agent can be judged against</text>
-
-  <!-- north star mark: the fixed point the whole run is aimed at -->
-  <g transform="translate(1130,58)">
-    <circle r="17" class="star"/>
-    <path d="M0,-11 L3.2,-3.2 L11,0 L3.2,3.2 L0,11 L-3.2,3.2 L-11,0 L-3.2,-3.2 Z" class="blue"/>
+  <rect width="1200" height="400" rx="18" fill="url(#bg)"/>
+  <ellipse cx="1030" cy="150" rx="330" ry="210" fill="url(#aurora)"/>
+  <g>
+    <circle class="tw" cx="779" cy="36" r="1.3" fill="#dfe8ff" opacity="0.90" style="animation-delay:0.6s;animation-duration:5.0s"/>
+    <circle class="tw" cx="660" cy="31" r="1.3" fill="#dfe8ff" opacity="0.73" style="animation-delay:0.7s;animation-duration:3.6s"/>
+    <circle class="tw" cx="1130" cy="230" r="1.1" fill="#dfe8ff" opacity="0.68" style="animation-delay:0.3s;animation-duration:3.6s"/>
+    <circle class="tw" cx="166" cy="169" r="1.3" fill="#dfe8ff" opacity="0.84" style="animation-delay:0.7s;animation-duration:3.9s"/>
+    <circle class="tw" cx="222" cy="231" r="1.7" fill="#dfe8ff" opacity="0.78" style="animation-delay:1.1s;animation-duration:3.2s"/>
+    <circle class="tw" cx="676" cy="246" r="1.1" fill="#dfe8ff" opacity="0.54" style="animation-delay:4.1s;animation-duration:4.4s"/>
+    <circle class="tw" cx="701" cy="182" r="0.9" fill="#dfe8ff" opacity="0.82" style="animation-delay:1.5s;animation-duration:3.5s"/>
+    <circle class="tw" cx="594" cy="140" r="1.1" fill="#dfe8ff" opacity="0.42" style="animation-delay:1.7s;animation-duration:6.4s"/>
+    <circle class="tw" cx="503" cy="299" r="0.8" fill="#dfe8ff" opacity="0.93" style="animation-delay:5.6s;animation-duration:4.4s"/>
+    <circle class="tw" cx="100" cy="222" r="0.9" fill="#dfe8ff" opacity="0.65" style="animation-delay:2.0s;animation-duration:4.1s"/>
+    <circle class="tw" cx="952" cy="34" r="0.6" fill="#dfe8ff" opacity="0.75" style="animation-delay:5.7s;animation-duration:4.6s"/>
+    <circle class="tw" cx="80" cy="277" r="1.7" fill="#dfe8ff" opacity="0.62" style="animation-delay:3.5s;animation-duration:5.3s"/>
+    <circle class="tw" cx="856" cy="349" r="0.9" fill="#dfe8ff" opacity="0.45" style="animation-delay:0.1s;animation-duration:4.5s"/>
+    <circle class="tw" cx="147" cy="31" r="0.9" fill="#dfe8ff" opacity="0.58" style="animation-delay:0.8s;animation-duration:3.7s"/>
+    <circle class="tw" cx="1040" cy="39" r="1.1" fill="#dfe8ff" opacity="0.43" style="animation-delay:2.4s;animation-duration:3.8s"/>
+    <circle class="tw" cx="518" cy="219" r="1.7" fill="#dfe8ff" opacity="0.88" style="animation-delay:2.5s;animation-duration:4.1s"/>
+    <circle class="tw" cx="1142" cy="66" r="0.8" fill="#dfe8ff" opacity="0.36" style="animation-delay:0.9s;animation-duration:5.2s"/>
+    <circle class="tw" cx="992" cy="78" r="0.9" fill="#dfe8ff" opacity="0.57" style="animation-delay:0.0s;animation-duration:4.4s"/>
+    <circle class="tw" cx="679" cy="374" r="1.7" fill="#dfe8ff" opacity="0.74" style="animation-delay:5.2s;animation-duration:6.3s"/>
+    <circle class="tw" cx="884" cy="183" r="1.7" fill="#dfe8ff" opacity="0.59" style="animation-delay:4.8s;animation-duration:4.3s"/>
+    <circle class="tw" cx="131" cy="252" r="0.6" fill="#dfe8ff" opacity="0.61" style="animation-delay:1.1s;animation-duration:6.4s"/>
+    <circle class="tw" cx="138" cy="239" r="0.6" fill="#dfe8ff" opacity="0.41" style="animation-delay:0.0s;animation-duration:3.4s"/>
+    <circle class="tw" cx="439" cy="18" r="0.8" fill="#dfe8ff" opacity="0.50" style="animation-delay:3.7s;animation-duration:3.3s"/>
+    <circle class="tw" cx="153" cy="334" r="1.1" fill="#dfe8ff" opacity="0.44" style="animation-delay:2.9s;animation-duration:4.0s"/>
+    <circle class="tw" cx="896" cy="292" r="1.1" fill="#dfe8ff" opacity="0.36" style="animation-delay:5.0s;animation-duration:3.4s"/>
+    <circle class="tw" cx="1134" cy="211" r="0.8" fill="#dfe8ff" opacity="0.80" style="animation-delay:4.1s;animation-duration:6.2s"/>
+    <circle class="tw" cx="361" cy="255" r="0.6" fill="#dfe8ff" opacity="0.57" style="animation-delay:4.2s;animation-duration:3.8s"/>
+    <circle class="tw" cx="206" cy="304" r="1.3" fill="#dfe8ff" opacity="0.73" style="animation-delay:3.2s;animation-duration:4.7s"/>
+    <circle class="tw" cx="734" cy="311" r="0.8" fill="#dfe8ff" opacity="0.79" style="animation-delay:4.8s;animation-duration:5.8s"/>
+    <circle class="tw" cx="276" cy="207" r="0.9" fill="#dfe8ff" opacity="0.82" style="animation-delay:4.4s;animation-duration:6.5s"/>
+    <circle class="tw" cx="567" cy="82" r="1.3" fill="#dfe8ff" opacity="0.91" style="animation-delay:5.7s;animation-duration:4.5s"/>
+    <circle class="tw" cx="1178" cy="375" r="0.9" fill="#dfe8ff" opacity="0.63" style="animation-delay:0.5s;animation-duration:3.2s"/>
+    <circle class="tw" cx="408" cy="193" r="1.3" fill="#dfe8ff" opacity="0.74" style="animation-delay:5.0s;animation-duration:4.6s"/>
+    <circle class="tw" cx="955" cy="41" r="1.7" fill="#dfe8ff" opacity="0.78" style="animation-delay:0.7s;animation-duration:4.2s"/>
+    <circle class="tw" cx="244" cy="349" r="1.1" fill="#dfe8ff" opacity="0.83" style="animation-delay:4.7s;animation-duration:4.0s"/>
+    <circle class="tw" cx="1158" cy="160" r="1.1" fill="#dfe8ff" opacity="0.45" style="animation-delay:4.5s;animation-duration:3.1s"/>
+    <circle class="tw" cx="1184" cy="19" r="1.3" fill="#dfe8ff" opacity="0.44" style="animation-delay:5.4s;animation-duration:5.8s"/>
+    <circle class="tw" cx="987" cy="384" r="1.7" fill="#dfe8ff" opacity="0.68" style="animation-delay:5.6s;animation-duration:3.4s"/>
+    <circle class="tw" cx="33" cy="315" r="1.7" fill="#dfe8ff" opacity="0.91" style="animation-delay:3.9s;animation-duration:4.7s"/>
+    <circle class="tw" cx="522" cy="343" r="0.8" fill="#dfe8ff" opacity="0.65" style="animation-delay:0.2s;animation-duration:3.6s"/>
+    <circle class="tw" cx="912" cy="133" r="1.3" fill="#dfe8ff" opacity="0.90" style="animation-delay:2.5s;animation-duration:3.3s"/>
+    <circle class="tw" cx="427" cy="184" r="1.3" fill="#dfe8ff" opacity="0.85" style="animation-delay:4.9s;animation-duration:4.7s"/>
+    <circle class="tw" cx="1048" cy="58" r="0.8" fill="#dfe8ff" opacity="0.61" style="animation-delay:3.1s;animation-duration:2.9s"/>
+    <circle class="tw" cx="225" cy="10" r="0.8" fill="#dfe8ff" opacity="0.79" style="animation-delay:1.0s;animation-duration:4.6s"/>
+    <circle class="tw" cx="667" cy="133" r="1.3" fill="#dfe8ff" opacity="0.82" style="animation-delay:3.2s;animation-duration:4.6s"/>
+    <circle class="tw" cx="1054" cy="30" r="0.8" fill="#dfe8ff" opacity="0.65" style="animation-delay:1.7s;animation-duration:5.7s"/>
+    <circle class="tw" cx="673" cy="300" r="0.6" fill="#dfe8ff" opacity="0.65" style="animation-delay:2.7s;animation-duration:5.1s"/>
+    <circle class="tw" cx="614" cy="274" r="1.1" fill="#dfe8ff" opacity="0.65" style="animation-delay:3.0s;animation-duration:5.8s"/>
+    <circle class="tw" cx="301" cy="209" r="0.9" fill="#dfe8ff" opacity="0.47" style="animation-delay:5.5s;animation-duration:6.1s"/>
+    <circle class="tw" cx="538" cy="168" r="1.1" fill="#dfe8ff" opacity="0.49" style="animation-delay:2.7s;animation-duration:3.1s"/>
+    <circle class="tw" cx="95" cy="265" r="0.6" fill="#dfe8ff" opacity="0.78" style="animation-delay:5.4s;animation-duration:3.4s"/>
+    <circle class="tw" cx="790" cy="63" r="0.8" fill="#dfe8ff" opacity="0.92" style="animation-delay:5.8s;animation-duration:3.6s"/>
+    <circle class="tw" cx="480" cy="195" r="1.7" fill="#dfe8ff" opacity="0.61" style="animation-delay:5.0s;animation-duration:3.4s"/>
+    <circle class="tw" cx="618" cy="138" r="0.8" fill="#dfe8ff" opacity="0.57" style="animation-delay:2.1s;animation-duration:3.1s"/>
+    <circle class="tw" cx="408" cy="184" r="1.7" fill="#dfe8ff" opacity="0.72" style="animation-delay:0.1s;animation-duration:4.0s"/>
+    <circle class="tw" cx="615" cy="33" r="0.8" fill="#dfe8ff" opacity="0.51" style="animation-delay:5.8s;animation-duration:3.2s"/>
+    <circle class="tw" cx="55" cy="307" r="0.9" fill="#dfe8ff" opacity="0.86" style="animation-delay:4.5s;animation-duration:5.8s"/>
+    <circle class="tw" cx="808" cy="371" r="1.1" fill="#dfe8ff" opacity="0.69" style="animation-delay:0.9s;animation-duration:6.2s"/>
+    <circle class="tw" cx="837" cy="42" r="0.6" fill="#dfe8ff" opacity="0.89" style="animation-delay:4.8s;animation-duration:3.5s"/>
+    <circle class="tw" cx="326" cy="14" r="0.6" fill="#dfe8ff" opacity="0.86" style="animation-delay:4.8s;animation-duration:3.1s"/>
+    <circle class="tw" cx="87" cy="339" r="1.1" fill="#dfe8ff" opacity="0.60" style="animation-delay:0.1s;animation-duration:6.5s"/>
+    <circle class="tw" cx="1092" cy="247" r="0.6" fill="#dfe8ff" opacity="0.42" style="animation-delay:3.2s;animation-duration:3.7s"/>
+    <circle class="tw" cx="199" cy="27" r="0.8" fill="#dfe8ff" opacity="0.67" style="animation-delay:5.6s;animation-duration:5.1s"/>
+    <circle class="tw" cx="252" cy="179" r="1.7" fill="#dfe8ff" opacity="0.36" style="animation-delay:1.1s;animation-duration:4.1s"/>
+    <circle class="tw" cx="305" cy="14" r="1.7" fill="#dfe8ff" opacity="0.66" style="animation-delay:3.0s;animation-duration:6.4s"/>
+    <circle class="tw" cx="299" cy="180" r="1.7" fill="#dfe8ff" opacity="0.65" style="animation-delay:4.9s;animation-duration:4.4s"/>
+    <circle class="tw" cx="996" cy="159" r="1.3" fill="#dfe8ff" opacity="0.49" style="animation-delay:1.8s;animation-duration:3.6s"/>
+    <circle class="tw" cx="243" cy="347" r="1.7" fill="#dfe8ff" opacity="0.56" style="animation-delay:3.8s;animation-duration:4.3s"/>
+    <circle class="tw" cx="92" cy="293" r="0.9" fill="#dfe8ff" opacity="0.75" style="animation-delay:2.6s;animation-duration:3.0s"/>
+    <circle class="tw" cx="459" cy="202" r="0.9" fill="#dfe8ff" opacity="0.38" style="animation-delay:3.6s;animation-duration:5.4s"/>
   </g>
-
-  <!-- pipeline -->
-  <g transform="translate(40,150)">
-    <!-- star -->
-    <rect class="box" x="0" y="0" width="150" height="66" rx="10"/>
-    <text class="lbl" x="18" y="30">star</text>
-    <text class="small" x="18" y="50">saved + validated</text>
-
-    <path class="flow" d="M150,33 L186,33"/>
-    <path class="flow" d="M178,27 L186,33 L178,39"/>
-
-    <!-- prompt -->
-    <rect class="box" x="190" y="0" width="160" height="66" rx="10"/>
-    <text class="lbl" x="208" y="30">prompt</text>
-    <text class="small" x="208" y="50">generated from it</text>
-
-    <path class="flow" d="M350,33 L386,33"/>
-    <path class="flow" d="M378,27 L386,33 L378,39"/>
-
-    <!-- run -->
-    <rect class="box" x="390" y="0" width="150" height="66" rx="10"/>
-    <text class="lbl" x="408" y="30">run</text>
-    <text class="small" x="408" y="50">does the work</text>
-
-    <path class="flow" d="M540,33 L576,33"/>
-    <path class="flow" d="M568,27 L576,33 L568,39"/>
-
-    <!-- evidence -->
-    <rect class="box" x="580" y="0" width="180" height="66" rx="10"/>
-    <text class="lbl" x="598" y="30">evidence file</text>
-    <text class="small" x="598" y="50">one line per result</text>
-
-    <path class="flowhi" d="M760,33 L800,33"/>
-    <path class="flowhi" d="M792,27 L800,33 L792,39"/>
-
-    <!-- the gate -->
-    <rect x="804" y="-16" width="356" height="98" rx="12" fill="#161b22" stroke="#d29922" stroke-width="2"/>
-    <text class="accent" x="824" y="10" style="font: 600 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;">gate</text>
-
-    <rect x="824" y="20" width="150" height="46" rx="8" fill="#0d1117" stroke="#30363d" stroke-width="2"/>
-    <text class="lbl" x="838" y="40">checks</text>
-    <text class="tiny" x="838" y="56">shell, exits 0</text>
-
-    <rect x="988" y="20" width="152" height="46" rx="8" fill="#0d1117" stroke="#30363d" stroke-width="2"/>
-    <text class="lbl" x="1002" y="40">judge</text>
-    <text class="tiny" x="1002" y="56">jev, typed answers</text>
-
-    <path class="flowhi" d="M1160,33 L1196,33"/>
-    <path class="flowhi" d="M1188,27 L1196,33 L1188,39"/>
-  </g>
-
-  <!-- verdict strip -->
-  <g transform="translate(40,258)">
-    <text class="small" x="0" y="0"><tspan class="green">exit 0</tspan><tspan class="jd"> = every requirement is met</tspan></text>
-    <text class="small" x="0" y="20"><tspan class="accent">exit 1</tspan><tspan class="jd"> = keep going, and stdout names the weakest requirement</tspan></text>
-    <text class="tiny" x="0" y="46">no evidence, no verdict  ·  a judge that cannot answer never passes  ·  77 checks, no key and no network needed</text>
-  </g>
+  <text x="56" y="96" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="58" font-weight="800" letter-spacing="-1.5" fill="#f5f8ff">north<tspan fill="#ffd479">-</tspan>star</text>
+  <text x="58" y="134" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="20" fill="#9aa7c0">write the finish line down, then let it judge the run</text>
+  <path d="M118,300 L338,262 L566,286 L790,226 L1030,150" fill="none" stroke="#ffd479" stroke-opacity=".18" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="path" d="M118,300 L338,262 L566,286 L790,226 L1030,150" fill="none" stroke="#ffd479" stroke-opacity=".75" stroke-width="2" stroke-dasharray="6 10" stroke-linecap="round"/>
+  <circle cx="118" cy="300" r="22" fill="url(#nodehalo)"/>
+  <path d="M118,291 Q120.52,297.48 127,300 Q120.52,302.52 118,309 Q115.48,302.52 109,300 Q115.48,297.48 118,291 Z" fill="#eaf2ff" filter="url(#glow)"/>
+  <text x="118" y="338" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#eef3ff">star</text>
+  <text x="118" y="358" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'Cascadia Mono', Consolas, monospace" font-size="13" fill="#8b97b1">saved + checked</text>
+  <circle cx="338" cy="262" r="22" fill="url(#nodehalo)"/>
+  <path d="M338,253 Q340.52,259.48 347,262 Q340.52,264.52 338,271 Q335.48,264.52 329,262 Q335.48,259.48 338,253 Z" fill="#eaf2ff" filter="url(#glow)"/>
+  <text x="338" y="300" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#eef3ff">prompt</text>
+  <text x="338" y="320" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'Cascadia Mono', Consolas, monospace" font-size="13" fill="#8b97b1">made from it</text>
+  <circle cx="566" cy="286" r="22" fill="url(#nodehalo)"/>
+  <path d="M566,277 Q568.52,283.48 575,286 Q568.52,288.52 566,295 Q563.48,288.52 557,286 Q563.48,283.48 566,277 Z" fill="#eaf2ff" filter="url(#glow)"/>
+  <text x="566" y="324" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#eef3ff">run</text>
+  <text x="566" y="344" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'Cascadia Mono', Consolas, monospace" font-size="13" fill="#8b97b1">does the work</text>
+  <circle cx="790" cy="226" r="22" fill="url(#nodehalo)"/>
+  <path d="M790,217 Q792.52,223.48 799,226 Q792.52,228.52 790,235 Q787.48,228.52 781,226 Q787.48,223.48 790,217 Z" fill="#eaf2ff" filter="url(#glow)"/>
+  <text x="790" y="264" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#eef3ff">evidence</text>
+  <text x="790" y="284" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'Cascadia Mono', Consolas, monospace" font-size="13" fill="#8b97b1">what it found</text>
+  <circle class="pulse" cx="1030" cy="150" r="95" fill="url(#halo)"/>
+  <path d="M1030.0,88.0 L1032.5,144.0 L1040.6,139.4 L1036.0,147.5 L1070.0,150.0 L1036.0,152.5 L1040.6,160.6 L1032.5,156.0 L1030.0,190.0 L1027.5,156.0 L1019.4,160.6 L1024.0,152.5 L990.0,150.0 L1024.0,147.5 L1019.4,139.4 L1027.5,144.0 Z" fill="url(#core)" filter="url(#glow)"/>
+  <circle cx="1030" cy="150" r="4.5" fill="#fffdf5"/>
+  <text x="1030" y="66" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'Cascadia Mono', Consolas, monospace" font-size="13" letter-spacing="2" fill="#ffd479">THE GATE</text>
+  <text x="1030" y="242" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#eef3ff">checks, then a Jev judge</text>
+  <text x="872" y="348" font-family="ui-monospace, SFMono-Regular, 'Cascadia Mono', Consolas, monospace" font-size="13" fill="#7ee2a8">exit 0<tspan fill="#c9d3e6">  every requirement is met</tspan></text>
+  <text x="872" y="372" font-family="ui-monospace, SFMono-Regular, 'Cascadia Mono', Consolas, monospace" font-size="13" fill="#ffc36b">exit 1<tspan fill="#c9d3e6">  keep going, names the weakest</tspan></text>
 </svg>

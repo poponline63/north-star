@@ -1,0 +1,23 @@
+name: Bug report
+description: The tool did something the README says it shouldn't
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: The command you ran, what you expected, and what it printed (with the exit code).
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: star
+    attributes:
+      label: The star, if it matters
+      description: The star JSON (trim anything private). If `set` refused it, paste the refusal too.
+      render: json
+  - type: input
+    id: env
+    attributes:
+      label: Python version and judge
+      placeholder: Python 3.12 · --no-judge / Jev / custom judge
